@@ -1,9 +1,9 @@
 package com.jared.livedatabus.demo
 
-import com.jared.livedatabus.BusLiveData
+import com.jared.livedatabus.SingleLiveData
 
 interface Chat {
 
-    fun message(): BusLiveData<Int>
+    fun message(): SingleLiveData<Int>
 
 }

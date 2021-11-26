@@ -1,6 +1,6 @@
 package com.jared.livedatabus.core
 
-import com.jared.livedatabus.BusLiveData
+import com.jared.livedatabus.SingleLiveData
 
 internal class LiveDataBusCore {
 
@@ -13,15 +13,15 @@ internal class LiveDataBusCore {
         fun getInstance() = defaultBus
     }
 
-    private val mBusMap : MutableMap<String, BusLiveData<*>> by lazy {
+    private val mBusMap : MutableMap<String, SingleLiveData<*>> by lazy {
         mutableMapOf()
     }
 
     @Suppress("UNCHECKED_CAST")
-    fun <T> getChannel(key: String) : BusLiveData<T> {
+    fun <T> getChannel(key: String) : SingleLiveData<T> {
 
         return mBusMap.getOrPut(key){
-            BusLiveData<T>()
-        } as BusLiveData<T>
+            SingleLiveData<T>()
+        } as SingleLiveData<T>
     }
 }
