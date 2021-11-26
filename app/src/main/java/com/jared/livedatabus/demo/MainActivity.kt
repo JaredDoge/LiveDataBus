@@ -10,7 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import com.jared.livedatabus.LiveDataBus
-import com.jared.livedatabus.BusLiveData
+import com.jared.livedatabus.SingleLiveData
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //不用LiveDataBus，也可以單獨使用，可以確保訊息的來源是可靠的
-        val b = BusLiveData<String>()
+        val b = SingleLiveData<String>()
         b.observe(this, {
             Log.d("Bus", it)
         })

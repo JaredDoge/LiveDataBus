@@ -12,18 +12,18 @@ class LiveDataBus {
 
         @JvmStatic
         @Synchronized
-        fun <T> getSyn(key: String): BusLiveData<T> {
+        fun <T> getSyn(key: String): SingleLiveData<T> {
             require(key.isNotEmpty()) { "Bus Key value cannot be empty" }
             return get(key)
         }
 
         @JvmStatic
-        fun <T> get(key: String): BusLiveData<T> {
+        fun <T> get(key: String): SingleLiveData<T> {
             require(key.isNotEmpty()) { "Bus Key value cannot be empty" }
             return LiveDataBusCore.getInstance().getChannel(key)
         }
 
-        private fun <T> get(key: String, type: Class<T>): BusLiveData<T> {
+        private fun <T> get(key: String, type: Class<T>): SingleLiveData<T> {
             require(key.isNotEmpty()) { "Bus Key value cannot be empty" }
             return LiveDataBusCore.getInstance().getChannel(key)
         }
