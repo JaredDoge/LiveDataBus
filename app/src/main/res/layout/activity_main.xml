@@ -9,40 +9,16 @@
     >
 
 
-    <EditText
-        android:id="@+id/et"
-        android:hint="value"
-        android:layout_width="0dp"
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="show"
         />
 
-    <Button
-        android:id="@+id/btn_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et"
-        android:text="send"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_remove"
-        app:layout_constraintEnd_toStartOf="@id/btn_send"
-        app:layout_constraintTop_toBottomOf="@id/et"
-        android:layout_marginEnd="4dp"
-        android:text="remove"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

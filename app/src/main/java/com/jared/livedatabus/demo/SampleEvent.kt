@@ -2,7 +2,7 @@ package com.jared.livedatabus.demo
 
 import com.jared.livedatabus.SingleLiveData
 
-interface Chat {
+interface SampleEvent {
 
     fun message(): SingleLiveData<Int>
 
